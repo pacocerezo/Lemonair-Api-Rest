@@ -1,0 +1,682 @@
+{
+	"info": {
+		"_postman_id": "94c7ead8-9380-47bd-acc3-38497cd32404",
+		"name": "Lemonair API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25266860"
+	},
+	"item": [
+		{
+			"name": "lemonair",
+			"item": [
+				{
+					"name": "vuelo",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Consultar vuelo",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/vuelo/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"vuelo",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										},
+										"description": "Devolverá los datos del vuelo identificado por su Id"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/lemonair/vuelo/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"lemonair",
+														"vuelo",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								},
+								{
+									"name": "Editar vuelo",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/vuelo/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"vuelo",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										},
+										"description": "Editará el vuelo identificado por su Id con los nuevos datos"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/lemonair/vuelo/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"lemonair",
+														"vuelo",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								},
+								{
+									"name": "Borrar vuelo",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/vuelo/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"vuelo",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										},
+										"description": "Eliminará el vuelo identificado por su Id de la la lista de vuelos pendientes de despegar"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/lemonair/vuelo/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"lemonair",
+														"vuelo",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "200 OK"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Obtener información de los vuelos programados",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/lemonair/vuelo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"lemonair",
+										"vuelo"
+									]
+								},
+								"description": "Devolverá una lista con los vuelos pendientes de despegar del aeropuerto"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/vuelo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"vuelo"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"despegado\": \"<boolean>\",\n    \"fechaDespegue\": \"<dateTime>\",\n    \"ultimaModificacion\": \"<dateTime>\",\n    \"avionId\": \"<long>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"despegado\": \"<boolean>\",\n    \"fechaDespegue\": \"<dateTime>\",\n    \"ultimaModificacion\": \"<dateTime>\",\n    \"avionId\": \"<long>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Añadir un nuevo vuelo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/lemonair/vuelo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"lemonair",
+										"vuelo"
+									]
+								},
+								"description": "Añadirá un nuevo vuelo a la lista de pendientes de despegar del aeropuerto"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/vuelo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"vuelo"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"despegado\": \"<boolean>\",\n  \"fechaDespegue\": \"<dateTime>\",\n  \"ultimaModificacion\": \"<dateTime>\",\n  \"avionId\": \"<long>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "salida",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "despegue",
+									"item": [
+										{
+											"name": "Vuelo ha despegado",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/lemonair/salida/:id/despegue",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"lemonair",
+														"salida",
+														":id",
+														"despegue"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>"
+														}
+													]
+												},
+												"description": "Editará el vuelo identificado por su Id indicando que ha salido del aeropuerto"
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/lemonair/salida/:id/despegue",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"lemonair",
+																"salida",
+																":id",
+																"despegue"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Consultar estado del vuelo",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/salida/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"salida",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										},
+										"description": "Indicará si el vuelo ha salido ya o no y la hora de dicha salida"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/lemonair/salida/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"lemonair",
+														"salida",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Devolverá una lista con los aviones que han salido ya del aeropuerto",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/lemonair/salida",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"lemonair",
+										"salida"
+									]
+								},
+								"description": "Identificador, modelo y capacidad de pasajeros"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/salida",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"salida"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"modelo\": \"<string>\",\n    \"capacidadPasajeros\": \"<integer>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"modelo\": \"<string>\",\n    \"capacidadPasajeros\": \"<integer>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "info",
+					"item": [
+						{
+							"name": "Devolverá la información de la aerolínea",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/lemonair/info",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"lemonair",
+										"info"
+									]
+								},
+								"description": "Identificador, nombre y número de aviones en la flota"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/lemonair/info",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"lemonair",
+												"info"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"<string>\",\n  \"sumaAviones\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

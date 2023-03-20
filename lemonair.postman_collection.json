@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "47b09e09-83e9-476b-90f3-fbc8c4c62a46",
+		"name": "pruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6253566"
+	},
+	"item": [
+		{
+			"name": "Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lemonair/info",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listado de vuelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lemonair/vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"vuelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salida",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lemonair/salida",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"salida"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertar vuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"despegado\": true,\r\n    \"fechaDespegue\": 1679086710,\r\n    \"avionId\": \"2\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lemonair/vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"vuelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar vuelo por id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"despegado\": true,\r\n    \"fechaDespegue\": 1679086710,\r\n    \"avionId\": \"2\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lemonair/vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"vuelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar vuelo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"despegado\": true,\r\n    \"fechaDespegue\": 1679086999,\r\n    \"avionId\": \"2\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lemonair/vuelo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"vuelo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salida de un vuelo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lemonair/salida/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"salida",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambiar despegue vuelo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lemonair/salida/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lemonair",
+						"salida",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
